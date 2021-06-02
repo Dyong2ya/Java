@@ -34,7 +34,7 @@ public class Apeach {
 
  void getWeight(int weight){
 	 this.weight += weight;
-	 while(10 <= this.weight){
+	 while(this.maxWeight <= this.weight){
 		 levelUp();
 		 this.weight -= 10;
 	 }
@@ -65,7 +65,7 @@ public class Apeach {
      break;
      }
    }
-   weight += food.weight;
+  // weight += food.weight;
   
   }
 }

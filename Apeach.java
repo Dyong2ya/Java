@@ -5,9 +5,10 @@ public class Apeach {
  int maxWeight;  
  int weight;   
  int level; 
+ int count;
  Food[] foods;  
  
- Apeach(String name, int weight){
+ Apeach(String name, int weight, int count){
   this.name = name;
   this.weight = 0;
   this.maxWeight = weight;
@@ -31,20 +32,30 @@ public class Apeach {
   //System.out.println(getFood);
   System.out.println("==============================");
  }
+ void count(){
+	 count++;
+ }
 
  void getWeight(int weight){
 	 this.weight += weight;
 	 while(this.maxWeight <= this.weight){
 		 levelUp();
-		 this.weight -= 10;
+		 //this.weight -= 10;
 	 }
  }
  void levelUp(){
 	   level++;
 	   maxWeight += 10;
-	   System.out.println("Level up~~살이 ٩(     ｡•ㅅ•｡            )و 쪘어요~~up!!!!!");
+	   System.out.println("★Level up~~살이 ٩(     ｡•ㅅ•｡            )و 쪘어요~~up!!!!★");
 	 }
- 
+	
+void loseWeight(int weight){ 
+	 this.weight -= weight;
+	 while(0 > this.weight){
+		 //System.out.println("어피치가 배가 고파서 게임을 진행할 수 없어요ㅠ.ㅠ  제이지를 이겨 냉장고를 채워요"); 
+		 break;
+	 }
+ }	
 // void loseWeight(int weight){ //
 //	 weight -= this.weight;
 //	 while(0 > weight){
